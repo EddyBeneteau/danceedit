@@ -1,36 +1,199 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DanceEdit Studio</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Montage musical pour danseurs | DanceEdit Studio</title>
+  <meta name="description" content="Montages musicaux professionnels pour danseurs, écoles de danse et chorégraphes. Coupes propres, mashups, timing compétition et finitions premium." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="hero">
-<img src="logo.png" class="logo">
-<h1>Montages musicaux professionnels pour la danse</h1>
-<p>Coupes propres, transitions fluides, mixage entre plusieurs musiques et timing précis pour spectacles et compétitions.</p>
-</header>
+  <div class="orb orb-left"></div>
+  <div class="orb orb-right"></div>
 
-<section class="features">
-<div class="card">Coupe musicale simple</div>
-<div class="card">Montage chorégraphique</div>
-<div class="card">Timing compétition</div>
-<div class="card">Montage créatif</div>
-</section>
+  <main class="page">
+    <section class="hero container">
+      <div class="topbar">
+        <div class="switch" id="currency-switch">
+          <button data-currency="EUR" class="active">€</button>
+          <button data-currency="USD">$</button>
+          <button data-currency="GBP">£</button>
+        </div>
+        <div class="switch" id="lang-switch">
+          <button data-lang="fr" class="active">FR</button>
+          <button data-lang="en">EN</button>
+          <button data-lang="es">ES</button>
+        </div>
+      </div>
 
-<section class="about">
-<img src="profile.jpg">
-<div>
-<h2>Eddy Beneteau</h2>
-<p>Producteur de musique depuis près de 30 ans. Je réalise des montages musicaux pour danseurs, spectacles et compétitions.</p>
-</div>
-</section>
+      <div class="logo-wrap">
+        <img src="logo.png" alt="DanceEdit Studio" class="logo" />
+      </div>
 
-<footer>
-<p>DanceEdit Studio – Eddy Beneteau</p>
-<p>Saint‑Hilaire‑de‑Brethmas, France</p>
-</footer>
+      <div class="hero-badge" data-i18n="musicEdits">Montages musicaux pour danseurs</div>
+      <h1 data-i18n="hero1">Montages musicaux professionnels pour la danse</h1>
+      <p class="hero-text" data-i18n="hero2">Coupes propres, transitions fluides, mixage entre plusieurs musiques, ajout de composition et rythmique et timing précis pour spectacles et compétitions.</p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary" data-i18n="cta1">Demander un devis</a>
+        <a href="#services" class="btn btn-secondary" data-i18n="cta2">Voir les services</a>
+      </div>
+
+      <div class="hero-meta">
+        <span>✓ <span data-i18n="remote">Travail à distance</span></span>
+        <span>✓ French & English</span>
+        <span>✓ <span data-i18n="fast">Livraison rapide</span></span>
+      </div>
+
+      <div class="feature-grid">
+        <article class="card small">
+          <h3 data-i18n="f1t">Coupe musicale simple</h3>
+          <p data-i18n="f1d">Coupe propre avec durée exacte pour la chorégraphie</p>
+        </article>
+        <article class="card small">
+          <h3 data-i18n="f2t">Montage chorégraphique</h3>
+          <p data-i18n="f2d">Assemblage et mixage entre plusieurs musiques</p>
+        </article>
+        <article class="card small">
+          <h3 data-i18n="f3t">Timing compétition</h3>
+          <p data-i18n="f3d">Structure musicale adaptée aux formats de compétition</p>
+        </article>
+        <article class="card small">
+          <h3 data-i18n="f4t">Montage créatif</h3>
+          <p data-i18n="f4d">Ajout de rythme, impacts et dynamique musicale</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container cred-wrap">
+      <div class="card cred-card">
+        <p data-i18n="cred">Montages musicaux utilisés par les danseurs, chorégraphes, écoles de danse, salle de gym, en spectacles et compétitions.</p>
+      </div>
+    </section>
+
+    <section class="container services-section" id="services">
+      <div class="section-head">
+        <h2 data-i18n="servicesTitle">Prestations</h2>
+        <p data-i18n="servicesDesc">Montage musical pour danseurs, professeurs et chorégraphes.</p>
+      </div>
+
+      <div class="price-grid">
+        <article class="card price-card">
+          <h3 data-i18n="basic">Essentiel</h3>
+          <div class="price" data-price="39"></div>
+          <a href="#" class="sample-link" data-i18n="listen">Écouter un exemple</a>
+          <ul id="basicItems"></ul>
+        </article>
+
+        <article class="card price-card">
+          <h3 data-i18n="perf">Performance</h3>
+          <div class="price" data-price="69"></div>
+          <a href="#" class="sample-link" data-i18n="listen">Écouter un exemple</a>
+          <ul id="perfItems"></ul>
+        </article>
+
+        <article class="card price-card">
+          <h3 data-i18n="premium">Premium Show</h3>
+          <div class="price" data-price="139"></div>
+          <a href="#" class="sample-link" data-i18n="listen">Écouter un exemple</a>
+          <ul id="premiumItems"></ul>
+        </article>
+
+        <article class="card price-card">
+          <h3 data-i18n="custom">Sur devis</h3>
+          <div class="price custom-price"></div>
+          <ul id="customItems"></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="container about-section">
+      <div class="about-card">
+        <div class="about-photo">
+          <div class="about-halo"></div>
+          <img src="profile.jpg" alt="Eddy Beneteau" />
+        </div>
+        <div class="about-copy">
+          <div class="mini-badge" data-i18n="about">À propos</div>
+          <h2>Eddy Beneteau</h2>
+          <p data-i18n="aboutText">Producteur de musique depuis près de 30 ans, je crée des montages musicaux sur mesure pour danseurs, spectacles et compétitions. Je danse aussi la salsa, la bachata et la kizomba, ce qui me permet de comprendre le rythme, l’énergie et les attentes des danseurs. J’ai travaillé avec de nombreuses personnes à travers le monde, y compris dans l’univers de la danse.</p>
+          <div class="tags">
+            <span data-i18n="tag1">30 ans de production musicale</span>
+            <span>Salsa • Bachata • Kizomba</span>
+            <span data-i18n="tag3">Expérience internationale</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band-section">
+      <div class="container two-col">
+        <div>
+          <h2 data-i18n="stylesTitle">Styles de danse</h2>
+          <div class="pill-list">
+            <span class="card pill">Salsa / Bachata</span>
+            <span class="card pill">Pole Dance</span>
+            <span class="card pill">Contemporary</span>
+            <span class="card pill">Hip-Hop / Breakdance</span>
+            <span class="card pill">Ballroom / Latin</span>
+            <span class="card pill">Street Jazz / Heels</span>
+          </div>
+        </div>
+        <div>
+          <h2 data-i18n="howTitle">Comment ça marche</h2>
+          <div class="steps">
+            <div class="card step" data-i18n="how1">1. Envoie ta musique et la durée souhaitée</div>
+            <div class="card step" data-i18n="how2">2. Explique les moments importants de la chorégraphie</div>
+            <div class="card step" data-i18n="how3">3. Reçois ton montage</div>
+            <div class="card step" data-i18n="how4">4. Ajustement si nécessaire</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container testimonials">
+      <div class="section-head">
+        <h2 data-i18n="testimonialsTitle">Témoignages</h2>
+        <p data-i18n="testimonialsDesc">Ce que disent les danseurs et chorégraphes après avoir travaillé avec moi.</p>
+      </div>
+      <div class="card testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p id="testimonial-text"></p>
+        <p class="author" id="testimonial-author"></p>
+      </div>
+      <div class="dots">
+        <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+    </section>
+
+    <section class="container reassure">
+      <span>⭐ +20 ans d’expérience audio</span>
+      <span>🏆 Montages utilisés en compétition</span>
+      <span>🌍 Clients internationaux</span>
+    </section>
+
+    <section class="container contact" id="contact">
+      <h2 data-i18n="contact">Contact</h2>
+      <div class="card contact-card">
+        <p class="contact-line" data-i18n="contactLine">N’hésitez pas à me contacter, je serai ravi de vous répondre rapidement.</p>
+        <div class="contact-actions">
+          <a href="mailto:Eddybeneteau@gmail.com" class="btn grad-blue">Email</a>
+          <a href="https://m.me/EddyBeneteaucommunication" target="_blank" rel="noreferrer" class="btn grad-indigo">Facebook</a>
+          <a href="https://www.instagram.com/eddybeneteau/" target="_blank" rel="noreferrer" class="btn grad-pink">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container footer">
+      <p class="footer-title">DanceEdit Studio – Eddy Beneteau</p>
+      <p>Montage musical pour danseurs et sportifs</p>
+      <p>📍 Saint-Hilaire-de-Brethmas, France</p>
+      <p>SIRET : 518 461 165 00020</p>
+    </footer>
+  </main>
+
+  <a id="whatsappFloat" class="whatsapp-float" href="#" target="_blank" rel="noreferrer">💬 WhatsApp</a>
+
+  <script src="script.js"></script>
 </body>
 </html>
