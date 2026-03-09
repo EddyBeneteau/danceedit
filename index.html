@@ -87,21 +87,27 @@
         <article class="glass-card price-card">
           <h3 data-i18n="basic">Essentiel</h3>
           <div class="price" data-price="39"></div>
-          <a href="#" class="sample-link" data-i18n="listen">Écouter un exemple</a>
+          <a class="sample-link open-video" data-video="https://www.youtube.com/embed/ABCDEFG">
+Écouter un exemple
+</a>
           <ul id="basicItems"></ul>
         </article>
 
         <article class="glass-card price-card">
           <h3 data-i18n="perf">Performance</h3>
           <div class="price" data-price="69"></div>
-          <a href="#" class="sample-link" data-i18n="listen">Écouter un exemple</a>
+          <a class="sample-link open-video" data-video="https://www.youtube.com/embed/ABCDEFG">
+Écouter un exemple
+</a>
           <ul id="perfItems"></ul>
         </article>
 
         <article class="glass-card price-card">
           <h3 data-i18n="premium">Premium Show</h3>
           <div class="price" data-price="139"></div>
-          <a href="#" class="sample-link" data-i18n="listen">Écouter un exemple</a>
+          <a class="sample-link open-video" data-video="https://www.youtube.com/embed/ABCDEFG">
+Écouter un exemple
+</a>
           <ul id="premiumItems"></ul>
         </article>
 
@@ -207,5 +213,18 @@
   <a id="whatsappFloat" class="whatsapp-float" href="#" target="_blank" rel="noreferrer">💬 WhatsApp</a>
 
   <script src="script.js"></script>
+
+  <div id="videoModal" class="video-modal">
+  <div class="video-content">
+    <span class="close-video">&times;</span>
+    <iframe id="videoFrame"
+      width="100%"
+      height="100%"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+  
 </body>
 </html>
