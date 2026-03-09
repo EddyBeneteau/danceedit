@@ -169,10 +169,9 @@ const rates = { EUR: 1, USD: 1.08, GBP: 0.86 };
 const symbols = { EUR: "€", USD: "$", GBP: "£" };
 let tIndex = 0;
 
-function setActiveButtons(groupId, valueKey, value){
-  document.querySelectorAll(`#${groupId} button`).forEach(btn => {
-    btn.classList.toggle("active", btn.dataset[valueKey] === value);
-  });
+function formatPrice(v){
+  if(v == null) return "";
+  return Math.round(v * rates[currency]) + " " + symbols[currency];
 }
 
 function fillList(id, items){
@@ -185,19 +184,14 @@ function fillList(id, items){
   });
 }
 
-function formatPrice(v){
-  if(v == null) return "";
-  return Math.round(v * rates[currency]) + " " + symbols[currency];
-}
-
 function updateTestimonials(){
-  const item = testimonials[lang][tIndex];
-  document.getElementById("testimonial-text").textContent = item[0];
-  document.getElementById("testimonial-author").textContent = item[1];
-  document.querySelectorAll(".dot").forEach((d,i) => d.classList.toggle("active", i === tIndex));
+  const items = testimonials[lang];
+  document.getElementById("testimonial-text").textContent = items[tIndex][0];
+  document.getElementById("testimonial-author").textContent = items[tIndex][1];
+  document.querySelectorAll(".dot").forEach((d,i)=>d.classList.toggle("active", i===tIndex));
 }
 
-function applyLanguage(){
+function applyLang(){
   const d = data[lang];
   document.documentElement.lang = lang;
   document.title = d.title;
@@ -210,7 +204,7 @@ function applyLanguage(){
   fillList("premiumItems", d.premiumItems);
   fillList("customItems", d.customItems);
   document.getElementById("whatsappFloat").href = "https://wa.me/33650858622?text=" + encodeURIComponent(d.whatsapp);
-  setActiveButtons("lang-switch", "lang", lang);
+  document.querySelectorAll("#lang-switch button").forEach(b=>b.classList.toggle("active", b.dataset.lang===lang));
   tIndex = 0;
   updateTestimonials();
 }
@@ -219,13 +213,13 @@ function applyCurrency(){
   document.querySelectorAll(".price[data-price]").forEach(el => {
     el.textContent = formatPrice(Number(el.dataset.price));
   });
-  setActiveButtons("currency-switch", "currency", currency);
+  document.querySelectorAll("#currency-switch button").forEach(b=>b.classList.toggle("active", b.dataset.currency===currency));
 }
 
 document.querySelectorAll("#lang-switch button").forEach(btn => {
   btn.addEventListener("click", () => {
     lang = btn.dataset.lang;
-    applyLanguage();
+    applyLang();
   });
 });
 
@@ -241,5 +235,5 @@ setInterval(() => {
   updateTestimonials();
 }, 4000);
 
-applyLanguage();
+applyLang();
 applyCurrency();

@@ -5,33 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Montage musical pour danseurs | DanceEdit Studio</title>
   <meta name="description" content="Montages musicaux professionnels pour danseurs, écoles de danse et chorégraphes. Coupes propres, mashups, timing compétition et finitions premium." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DanceEdit Studio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://danceedit.eddybeneteau.com/" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="orb orb-left"></div>
-  <div class="orb orb-right"></div>
+  <div class="bg-orb orb-left"></div>
+  <div class="bg-orb orb-right"></div>
 
-  <main class="page">
+  <main class="site">
     <section class="hero container">
       <div class="topbar">
         <div class="switch" id="currency-switch">
-          <button data-currency="EUR" class="active">€</button>
+          <button data-currency="EUR">€</button>
           <button data-currency="USD">$</button>
           <button data-currency="GBP">£</button>
         </div>
         <div class="switch" id="lang-switch">
-          <button data-lang="fr" class="active">FR</button>
+          <button data-lang="fr">FR</button>
           <button data-lang="en">EN</button>
           <button data-lang="es">ES</button>
         </div>
       </div>
 
       <div class="logo-wrap">
-        <img src="logo.png" alt="DanceEdit Studio" class="logo" />
+        <img src="logo.png" alt="DanceEdit Studio by Eddy Beneteau" class="logo" />
       </div>
 
       <div class="hero-badge" data-i18n="musicEdits">Montages musicaux pour danseurs</div>
+
       <h1 data-i18n="hero1">Montages musicaux professionnels pour la danse</h1>
+
       <p class="hero-text" data-i18n="hero2">Coupes propres, transitions fluides, mixage entre plusieurs musiques, ajout de composition et rythmique et timing précis pour spectacles et compétitions.</p>
 
       <div class="hero-actions">
@@ -46,19 +52,19 @@
       </div>
 
       <div class="feature-grid">
-        <article class="card small">
+        <article class="glass-card small-card">
           <h3 data-i18n="f1t">Coupe musicale simple</h3>
           <p data-i18n="f1d">Coupe propre avec durée exacte pour la chorégraphie</p>
         </article>
-        <article class="card small">
+        <article class="glass-card small-card">
           <h3 data-i18n="f2t">Montage chorégraphique</h3>
           <p data-i18n="f2d">Assemblage et mixage entre plusieurs musiques</p>
         </article>
-        <article class="card small">
+        <article class="glass-card small-card">
           <h3 data-i18n="f3t">Timing compétition</h3>
           <p data-i18n="f3d">Structure musicale adaptée aux formats de compétition</p>
         </article>
-        <article class="card small">
+        <article class="glass-card small-card">
           <h3 data-i18n="f4t">Montage créatif</h3>
           <p data-i18n="f4d">Ajout de rythme, impacts et dynamique musicale</p>
         </article>
@@ -66,7 +72,7 @@
     </section>
 
     <section class="container cred-wrap">
-      <div class="card cred-card">
+      <div class="glass-card cred-card">
         <p data-i18n="cred">Montages musicaux utilisés par les danseurs, chorégraphes, écoles de danse, salle de gym, en spectacles et compétitions.</p>
       </div>
     </section>
@@ -78,28 +84,28 @@
       </div>
 
       <div class="price-grid">
-        <article class="card price-card">
+        <article class="glass-card price-card">
           <h3 data-i18n="basic">Essentiel</h3>
           <div class="price" data-price="39"></div>
           <a href="#" class="sample-link" data-i18n="listen">Écouter un exemple</a>
           <ul id="basicItems"></ul>
         </article>
 
-        <article class="card price-card">
+        <article class="glass-card price-card">
           <h3 data-i18n="perf">Performance</h3>
           <div class="price" data-price="69"></div>
           <a href="#" class="sample-link" data-i18n="listen">Écouter un exemple</a>
           <ul id="perfItems"></ul>
         </article>
 
-        <article class="card price-card">
+        <article class="glass-card price-card">
           <h3 data-i18n="premium">Premium Show</h3>
           <div class="price" data-price="139"></div>
           <a href="#" class="sample-link" data-i18n="listen">Écouter un exemple</a>
           <ul id="premiumItems"></ul>
         </article>
 
-        <article class="card price-card">
+        <article class="glass-card price-card">
           <h3 data-i18n="custom">Sur devis</h3>
           <div class="price custom-price"></div>
           <ul id="customItems"></ul>
@@ -118,9 +124,9 @@
           <h2>Eddy Beneteau</h2>
           <p data-i18n="aboutText">Producteur de musique depuis près de 30 ans, je crée des montages musicaux sur mesure pour danseurs, spectacles et compétitions. Je danse aussi la salsa, la bachata et la kizomba, ce qui me permet de comprendre le rythme, l’énergie et les attentes des danseurs. J’ai travaillé avec de nombreuses personnes à travers le monde, y compris dans l’univers de la danse.</p>
           <div class="tags">
-            <span data-i18n="tag1">30 ans de production musicale</span>
-            <span>Salsa • Bachata • Kizomba</span>
-            <span data-i18n="tag3">Expérience internationale</span>
+            <span class="tag" data-i18n="tag1">30 ans de production musicale</span>
+            <span class="tag">Salsa • Bachata • Kizomba</span>
+            <span class="tag" data-i18n="tag3">Expérience internationale</span>
           </div>
         </div>
       </div>
@@ -131,21 +137,21 @@
         <div>
           <h2 data-i18n="stylesTitle">Styles de danse</h2>
           <div class="pill-list">
-            <span class="card pill">Salsa / Bachata</span>
-            <span class="card pill">Pole Dance</span>
-            <span class="card pill">Contemporary</span>
-            <span class="card pill">Hip-Hop / Breakdance</span>
-            <span class="card pill">Ballroom / Latin</span>
-            <span class="card pill">Street Jazz / Heels</span>
+            <span class="glass-card pill">Salsa / Bachata</span>
+            <span class="glass-card pill">Pole Dance</span>
+            <span class="glass-card pill">Contemporary</span>
+            <span class="glass-card pill">Hip-Hop / Breakdance</span>
+            <span class="glass-card pill">Ballroom / Latin</span>
+            <span class="glass-card pill">Street Jazz / Heels</span>
           </div>
         </div>
         <div>
           <h2 data-i18n="howTitle">Comment ça marche</h2>
           <div class="steps">
-            <div class="card step" data-i18n="how1">1. Envoie ta musique et la durée souhaitée</div>
-            <div class="card step" data-i18n="how2">2. Explique les moments importants de la chorégraphie</div>
-            <div class="card step" data-i18n="how3">3. Reçois ton montage</div>
-            <div class="card step" data-i18n="how4">4. Ajustement si nécessaire</div>
+            <div class="glass-card step" data-i18n="how1">1. Envoie ta musique et la durée souhaitée</div>
+            <div class="glass-card step" data-i18n="how2">2. Explique les moments importants de la chorégraphie</div>
+            <div class="glass-card step" data-i18n="how3">3. Reçois ton montage</div>
+            <div class="glass-card step" data-i18n="how4">4. Ajustement si nécessaire</div>
           </div>
         </div>
       </div>
@@ -156,13 +162,17 @@
         <h2 data-i18n="testimonialsTitle">Témoignages</h2>
         <p data-i18n="testimonialsDesc">Ce que disent les danseurs et chorégraphes après avoir travaillé avec moi.</p>
       </div>
-      <div class="card testimonial-card">
+
+      <div class="glass-card testimonial-card">
         <div class="stars">★★★★★</div>
         <p id="testimonial-text"></p>
         <p class="author" id="testimonial-author"></p>
       </div>
+
       <div class="dots">
-        <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
     </section>
 
@@ -174,8 +184,10 @@
 
     <section class="container contact" id="contact">
       <h2 data-i18n="contact">Contact</h2>
-      <div class="card contact-card">
+
+      <div class="glass-card contact-card">
         <p class="contact-line" data-i18n="contactLine">N’hésitez pas à me contacter, je serai ravi de vous répondre rapidement.</p>
+
         <div class="contact-actions">
           <a href="mailto:Eddybeneteau@gmail.com" class="btn grad-blue">Email</a>
           <a href="https://m.me/EddyBeneteaucommunication" target="_blank" rel="noreferrer" class="btn grad-indigo">Facebook</a>
