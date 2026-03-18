@@ -67,7 +67,7 @@ contactLine:"N’hésitez pas à me contacter, je serai ravi de vous répondre r
 footerLine1:"Montage musical pour danseurs et sportifs",
 footerLine2:"📍 Saint-Hilaire-de-Brethmas, France",
 footerLine3:"SIRET : 518 461 165 00020",
-whatsapp:"Bonjour Eddy, je voudrais un montage musical pour danse"
+whatsapp:"Bonjour Eddy, je voudrais un montage musical pour une chorégraphie."
 },
 en:{
 musicEdits:"Music edits for dancers",
@@ -116,7 +116,7 @@ contactLine:"Feel free to contact me, I will be happy to reply quickly.",
 footerLine1:"Music editing for dancers and athletes",
 footerLine2:"📍 Saint-Hilaire-de-Brethmas, France",
 footerLine3:"SIRET: 518 461 165 00020",
-whatsapp:"Hello Eddy, I would like a dance music edit"
+whatsapp:"Hello Eddy, I would like a music edit for a choreography."
 },
 es:{
 musicEdits:"Ediciones musicales para bailarines",
@@ -165,7 +165,7 @@ contactLine:"No dudes en contactarme, estaré encantado de responderte rápidame
 footerLine1:"Edición musical para bailarines y deportistas",
 footerLine2:"📍 Saint-Hilaire-de-Brethmas, Francia",
 footerLine3:"SIRET: 518 461 165 00020",
-whatsapp:"Hola Eddy, quiero una edición musical para baile"
+whatsapp:"Hola Eddy, me gustaría un montaje musical para una coreografía."
 }
 };
 
